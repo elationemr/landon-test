@@ -10,6 +10,8 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    env:
+      region: us-west-2
     steps:
       - uses: actions/checkout@v2
 
@@ -19,7 +21,7 @@ jobs:
           ecr-repository: ${{ steps.config.outputs.service_key }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ steps.config.outputs.region }}
+          aws-region: ${{ env.region.us-west-2 }}
 
       - name: Update Image Version in the related HelmChart values.yaml
         uses: fjogeleit/yaml-update-action@master
