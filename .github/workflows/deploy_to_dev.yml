@@ -15,6 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: CumulusDS/get-yaml-paths-action@v0.1.0
+        id: config
+        with:
+          file: config.yaml
+          service_key: service_key
+
       - uses: elationemr/github-actions/deployment/build-and-push-to-ecr@main
         id: build-and-push-image
         with:
