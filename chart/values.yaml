@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: 303970654249.dkr.ecr.us-west-2.amazonaws.com/landon-test
   pullPolicy: Always
-  tag: 9940b5e6cebef4baac4551324cd36d4aa84772f9
+  tag: 70b274d17dfcf348ac4e69b2c1a318f26346d903
 imagePullSecrets: []
 nameOverride: ''
 fullnameOverride: ''
