@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  generation: 13
+  name: landon-test
+  namespace: argocd
+spec:
+  destination:
+    namespace: landon-test
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    helm:
+      valueFiles:
+      - values.yaml
+    path: chart
+    repoURL: https://github.com/elationemr/landon-test
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true

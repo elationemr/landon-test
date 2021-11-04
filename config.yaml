@@ -1,0 +1,6 @@
+service_key: landon-test
+
+deployments:
+  feature_branches:
+    region: us-west-2
+    cluster: hackathon-microservices
