@@ -21,7 +21,7 @@ jobs:
           ecr-repository: ${{ steps.config.outputs.service_key }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.region.us-west-2 }}
+          aws-region: ${{ env.region }}
 
       - name: Update Image Version in the related HelmChart values.yaml
         uses: fjogeleit/yaml-update-action@master
