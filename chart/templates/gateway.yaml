@@ -11,4 +11,4 @@ spec:
       name: http
       protocol: http
     hosts:
-    - "*"
+    - "{{ .Values.deploymentLabel }}.{{ .Values.serviceName }}.hackathon.el8.io"
