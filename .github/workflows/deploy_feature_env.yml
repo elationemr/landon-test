@@ -67,5 +67,5 @@ jobs:
             -n ${{ steps.setup_namespace.outputs.namespace }} \
             --set image.tag=${{ steps.build-and-push-image.outputs.image_tag }} \
             --set namespace=${{ steps.setup_namespace.outputs.namespace }} \
-            --set deploymentLabel=${{ steps.extract_branch.outputs.branch }}
+            --set deploymentLabel=${{ steps.extract_branch.outputs.branch }} \
             --install
