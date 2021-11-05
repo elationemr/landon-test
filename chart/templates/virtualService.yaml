@@ -7,7 +7,7 @@ spec:
   hosts:
   - "{{ .Values.deploymentLabel }}.{{ .Values.serviceName }}.hackathon.el8.io"
   gateways:
-  - {{ include "chart.fullname" . }}-gateway
+  - cory/my-gateway
   http:
   - route:
     - destination:
