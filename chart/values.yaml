@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: 303970654249.dkr.ecr.us-west-2.amazonaws.com/landon-test
   pullPolicy: Always
-  tag: 0ac1baf718146aa791ef092e1699d9362a1ed50d
+  tag: 68235c40692cf0daf2c84b4b211bd47d7b4136aa
 serviceName: landon-test
 namespace: landon-test
 deploymentLabel: dev
