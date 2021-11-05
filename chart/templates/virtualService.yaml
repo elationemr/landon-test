@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: {{ include "chart.fullname" . }}-chart
+  name: {{ include "chart.fullname" . }}
   namespace: {{ .Values.namespace }}
 spec:
   hosts:
@@ -11,7 +11,7 @@ spec:
   http:
   - route:
     - destination:
-        host: {{ include "chart.fullname" . }}-chart
+        host: {{ include "chart.fullname" . }}
         port:
           number: 80
 
