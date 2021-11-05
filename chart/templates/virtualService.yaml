@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ include "chart.fullname" . }}-chart
+  namespace: {{ .Values.namespace }}
+spec:
+  hosts:
+  - "{{ .Values.namespace }}.{{ .Values.serviceName }}.hackathon.el8.io"
+  gateways:
+  - {{ include "chart.fullname" . }}-gateway
+  http:
+  - route:
+    - destination:
+        host: {{ include "chart.fullname" . }}-chart
+        port:
+          number: 80

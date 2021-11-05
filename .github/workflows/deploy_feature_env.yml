@@ -66,4 +66,5 @@ jobs:
           helm upgrade ${{ steps.extract_branch.outputs.branch }} . \
             -n ${{ steps.setup_namespace.outputs.namespace }} \
             --set image.tag=${{ steps.build-and-push-image.outputs.image_tag }} \
+            --set namespace=${{ steps.extract_branch.outputs.branch }}
             --install
