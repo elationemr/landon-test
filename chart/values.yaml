@@ -4,7 +4,7 @@ image:
   pullPolicy: Always
   tag: 5edab77479cbfe2b12ab9f4a5793305911b06e1b
 serviceName: landon-test
-namespace: dev
+namespace: landon-test
 deploymentLabel: dev
 imagePullSecrets: []
 nameOverride: ''
