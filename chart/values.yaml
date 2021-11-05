@@ -13,6 +13,7 @@ image:
 serviceName: landon-test
 
 namespace: dev
+deploymentLabel: dev
 
 imagePullSecrets: []
 nameOverride: ""
