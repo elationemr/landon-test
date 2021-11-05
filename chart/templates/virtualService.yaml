@@ -5,7 +5,7 @@ metadata:
   namespace: {{ .Values.namespace }}
 spec:
   hosts:
-  - "{{ .Values.serviceName }}.hackathon.el8.io"
+  - "{{ .Values.deploymentLabel }}.{{ .Values.serviceName }}.hackathon.el8.io"
   gateways:
   - {{ include "chart.fullname" . }}-gateway
   http:
